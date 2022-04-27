@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import TextField from './TextField/styled';
+import ToggleButton from './ToggleButton/styled';
+import ToggleButtonGroup from './ToggleButtonGroup/styled'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToggleButtonGroup
+        variant="tab"
+        size="sm"
+        name="tab-sm"
+        typeContent="title">
+        <>
+          <ToggleButton id="one" name="one">
+            One
+          </ToggleButton>
+          <ToggleButton id="two" name="two">
+            Two
+          </ToggleButton>
+          <ToggleButton id="three" name="three">
+            Three
+          </ToggleButton>
+        </>
+      </ToggleButtonGroup>
+      <TextField label="Label"
+                 size="sm"
+                 placeholder="Small"
+                 showClearBtn
+                 helpText="Help text" />
     </div>
   );
 }
